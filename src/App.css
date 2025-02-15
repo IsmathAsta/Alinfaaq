@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.nav-item-spacing {
+  font-weight: 500;
+  padding: 0 10px;
+  color: #000000 !important;
+  font-size: smaller;
+  text-align: center;
+}
+@media(max-width:500px) {
+  .list_items {
+    flex-direction: column;
+    gap: 13px !important;
+  }
+}
+.navbar-nav .nav-link {
+  font-size: 16px;
+  margin: 0 10px; /* Adjust spacing between links */
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link.active-link {
+  color: #E69D00 !important; /* Active color */
+}
+/********/
+@media(max-width:500px){
+  .slide-txt{
+    font-size: 12px;
+  }
+  .slider-bg{
+    height: 500px !important;
+  }
+}
+/***/
+.about-para p {
+  line-height: 1.9;
+  text-align: justify;
+}
+.aboutus_bg_content{
+  background:
+  linear-gradient(rgba(229, 243, 236, 0.5), rgba(229, 243, 236, 0.5)),
+  /* Adjust opacity here */
+  url('/public/images/aboutbg.jpg') !important;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+position: relative;
+padding: 85px 0px 99px;
+/* margin-bottom: 4%; */
+/* background: #e5f3ec !important; */
+color: black;
+font-family: "Lexend", sans-serif;
+position: relative;
+}
+.notice-board {
+  background: white;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 75%;
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media(max-width:500px){
+  .notice-board{
+    width: 100%;
+  }
+}
+.notices-list {
+  height: 300px; /* Adjust this as needed */
+ /* text-align: center; */
+  flex-grow: 1; 
+  overflow-y: auto;
+}
+
+.notice-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.notice-item h4 {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.notice-item span {
+  font-size: 12px;
+  color: #666;
+}
+/*******************services*************/
+.course_bg {
+  background-image:
+    
+    url('/public/images/popbg.png') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding: 85px 0px 99px;
+  margin-bottom: 4%;
+  background-color: #121d18 !important;
+  color: black;
+  font-family: "Lexend", sans-serif;
+  position: relative;
+}
+.course-heading h6 {
+  color: #ffffff;
+}
+
+.course-heading {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+/* .course-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+} */
+
+.course-item {
+  background-color: white;
+  color: black;
+  padding-top: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 236px;
+  font-family: "Roboto", sans-serif;
+}
+
+.course-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: #e6fbf3;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.course-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.course-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+/* .services-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+} */
+
+.services-card {
+  display: flex;
+  justify-content: center;
+}
+
+.service-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+ max-width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fdd835;
+  padding: 10px;
+}
+
+.service-item h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #fdd835;
+}
+/******courses*********/
+.popularcls-mainhead {
+  background-image: url('/public/images/service-bg.png');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10%;
+
+}
+
+.course-card {
+  height: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h2 {
+  font-size: 23px
+}
+
+.course-card .card-title {
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+}
+
+.course-card .card-img {
+  transition: transform 0.3s ease;
+}
+
+.course-card .card-text {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.course-section h4 {
+  font-size: 1.5rem;
+  color: #28a745;
+}
+
+.course-card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.course-section h2 {
+  font-size: 2.5rem;
+}
+
+.listofcourse {
+  border-top: 1px solid #e0e0e0;
+  /* Light gray color for the line */
+  border-bottom: 1px solid #e0e0e0;
+  /* Light gray color for the line */
+  padding: 5px 0;
+}
+
+.lastpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+@media(max-width:600px) {
+  .quick-heading {
+    display: inline !important;
+    text-align: center;
+  }
+
+  .quick-heading h3 {
+    text-align: center !important;
+  }
+}
+
+.quick_bg_content {
+  background-image:
+    linear-gradient(to right, rgba(8, 117, 66, 0.8) 0%, rgba(35, 198, 134, 0.8) 70%),
+    /* Gradient */
+    url('/public/images/servicebg.png');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  /* background: linear-gradient(to right, #087542 0%, #23c686 70%) !important; */
+}
+
+.quick-heading {
+  padding: 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quick-heading h3 {
+  text-align: left;
+  /* padding-bottom: 3%;
+    padding-top: 2%; */
+}
+
+.quickst {
+  border-radius: 5px;
+  padding: 14px 30px;
+  background-color: white;
+  color: #1d8e5a;
+  border: none;
+  white-space: nowrap;
+
+}
+
+/* .quick-button{
+  background-image: url('/public/images/alham-bg.png');
+  background-position: center;
+  background-size: contain;
+} */
+.course-card h2:hover {
+  color: #28a745;
+}
+.quick_bg_content {
+  background-image:
+    linear-gradient(to right,#f1c152  
+    0%, #e69d00 70%),
+    /* Gradient */
+    url('/public/images/bism.png');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  /* background: linear-gradient(to right, #087542 0%, #23c686 70%) !important; */
+}
+
+.quick-heading {
+  padding: 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.quick-heading h3 {
+  text-align: left;
+  /* padding-bottom: 3%;
+    padding-top: 2%; */
+}
+
+.quickst {
+  border-radius: 5px;
+  padding: 14px 30px;
+  background-color: white;
+  color: #1d8e5a;
+  border: none;
+  white-space: nowrap;
+
+}
+/***donate**/
+.donate-bg {
+  background-image: url("/public/images/donbg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding:50px 50px 0; /* Add padding to ensure content doesn't touch edges */
+}
+
+.donate-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.donate-bg .container {
+  position: relative;
+  z-index: 2; /* Ensures content is above the overlay */
+  color: rgb(255, 255, 255); /* Makes text readable */
+}
+.account-detail{
+  line-height: 2.8;
+  font-size: 20px;
+}
+@media(max-width:500px){
+  .account-detail{
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  .quick-headerr h3{
+  font-size: 16px;
+  }
+  .icon-button img{
+width: 30% !important;
+  }
+}
+/*********footer********/
+.footer-bottom {
+  background-image: url('/public/images/staticbg.png');
+  background-color: rgb(229, 243, 237) !important;
+  text-align: center;
+  padding: 10px 0;
+
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  margin: 0;
+  text-align: center;
+}
+
+.footer-container {
+  padding-top: 65px;
+  padding-bottom: 66px;
+}
+
+.footer_bg {
+  background-image: url('/public/images/footerbg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer h5 {
+  color: #fff;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer p,
+footer li {
+  color: #bbb;
+  padding-bottom: 10px;
+}
+
+.logo-section {
+  text-align: left;
+}
