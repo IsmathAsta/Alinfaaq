@@ -8,7 +8,7 @@ export default function Donate() {
                 <Container>
                     <Row>
                         <h2 style={{textAlign:'center',color:'#e69d00',fontWeight:'bold'}}>DONATE NOW</h2>
-                        <Col md={6} className="d-flex justify-content-center align-items-center">
+                        <Col md={6} className="d-flex justify-content-center align-items-center mb-2">
 
                                 <div className="account-detail ">
                                     <div className="d-flex justify-content-between">
@@ -28,7 +28,7 @@ export default function Donate() {
                                     </div>
                                 </div>
                             </Col>
-                            <Col md={6} className="d-flex justify-content-center">
+                            <Col md={6} className="d-flex justify-content-center scan-me">
                             <img src="images/qr.png" alt="scan-me" width={'50%'}/>
                             </Col>
                     </Row>

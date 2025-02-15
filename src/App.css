@@ -409,6 +409,9 @@ position: relative;
   .icon-button img{
 width: 30% !important;
   }
+  .scan-me img{
+    width: 70%;
+  }
 }
 /*********footer********/
 .footer-bottom {

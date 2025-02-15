@@ -32,7 +32,7 @@ export default function NavbarComponent() {
             {/* Logo */}
             <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
               <img src="images/logos.jpg" alt="logo" style={{ width: '100px', height: '50px', marginRight: '10px' }} />
-              <h5 className="mb-0 d-none d-sm-block" style={{ color: '#ffce05' }}>Al-Infaaq Welfare</h5>
+              <h5 className="mb-0 d-none d-sm-block" style={{ color: '#ffce05' }}>Al-Infaaq Welfare Association</h5>
             </Navbar.Brand>
 
             {/* Toggler Button */}
