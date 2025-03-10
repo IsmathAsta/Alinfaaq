@@ -1,23 +1,22 @@
 
+import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import About from './component/About';
-import BannerSlider from './component/BannerSlider';
-import Courses from './component/Courses';
-import Donate from './component/Donate';
 import Footer from './component/Footer';
 import NavbarComponent from './component/NavbarComponent';
-import Services from './component/Services';
+import Home from './component/Home';
+import SewingForm from './component/courseForm/SewingForm';
+import TailoringDetail from './component/courseDetails/TailoringDetail';
 
 function App() {
   return (
     <div className="App">
-     <NavbarComponent/>
-    <BannerSlider/>
-    <About/>
-    <Services/>
-    <Courses/>
-    <Donate/>
-    <Footer/>
+      <NavbarComponent />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/tailoringForm' element={<SewingForm/>}/>
+        <Route path='/tailoringDetail' element={<TailoringDetail/>}/>
+      </Routes>
+      <Footer />
     </div>
   );
 }

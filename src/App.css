@@ -462,3 +462,175 @@ footer li {
 .logo-section {
   text-align: left;
 }
+/*********************Sewing zform*******************/
+.sewing_bg{
+  background-image: url('/public/images/banner2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.sewing-img-content{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12%;
+  
+}
+.sewing-img-content h1{
+   text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+/*********quran***************/
+.course-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.course-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.meta-info{
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.meta-info span {
+  display: block;
+  margin-bottom: 10px;
+  
+}
+
+.about-course,
+.learn-section,
+.material-section,
+.curriculum-section {
+  margin-bottom: 40px;
+}
+
+.header-section {
+  background-color: #f0f4ff;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header-section h1 {
+  margin-bottom: 10px;
+}
+.accordion-button {
+  border: 1px solid #ccc;  /* Add a border around the button */
+  background-color: white;  /* Ensure button has a background */
+  border-radius: 5px;  /* Add rounded corners if needed */
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  border: 1px solid #ccc;  /* Border around the body */
+  border-top: none;  /* Ensure the body does not overlap the button's border */
+  padding: 15px;
+  background-color: #fff;
+}
+
+.accordion-button:focus
+{
+  outline: none !important;  /* Remove the default focus outline */
+  border-color:#ccc !important;  /* Blue border on focus or active state */
+}
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+}
+
+.accordion-header {
+  border-bottom: none;
+}
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;  /* Adjust this value as per your desired spacing */
+}
+/* .course-sidebar { */
+  /* background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* margin-top: -116px;
+    position: sticky;
+    z-index: 9; */
+/* } */
+
+.sidebar-card {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  width: 80%;
+}
+@media(max-width:1000px){
+  .sidebar-card{
+    width: 100%;
+  }
+}
+.video-container {
+  margin-bottom: 20px;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.share-course {
+  width: 100%;
+}
+
+.course-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-includes li {
+  margin-bottom: 10px;
+  border-bottom: inset;
+    display: flex;
+    justify-content: space-between;
+}
+.course-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-to-cart, .buy-course {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.course-divider {
+  margin: 20px 0;
+  border-top: 1px solid #eaeaea;
+}
+.share-course {
+  width: 100%;
+}
+.sticky-sidebar {
+  top: 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.course-sidebar {
+  margin-bottom: 30px;
+}
+.error-text {
+  color: red; /* Set text color to red */
+  font-size: 0.875rem; /* Adjust the font size if needed */
+  
+}
