@@ -5,10 +5,12 @@ import Footer from './component/Footer';
 import NavbarComponent from './component/NavbarComponent';
 import Home from './component/Home';
 import SoftwareForm from './component/courseForm/SoftwareForm';
+import ScrollToTop from './component/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop/>
       <NavbarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
