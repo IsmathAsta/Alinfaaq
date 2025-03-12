@@ -13,7 +13,7 @@ export default function Footer() {
                                 src="images/logos.jpg"
                                 className="al_quran"
                                 alt="logo"
-                                style={{ width: '30%', height: 'auto' }} loading="lazy" />
+                                style={{ width: '30%', height: 'auto',borderRadius:'15px' }} loading="lazy" />
                             <hr className="logo-line" />
                             <p>நமது செயல்பாடுகள் அனைத்தும் நல்லுள்ளம் கொண்ட சகோதரர்களிடம் சாந்தா வசூல் செய்து அதன் மூலம் நற்பணிகளை மேற்கொண்டு வருகிறோம்..</p>
                            
@@ -55,7 +55,7 @@ export default function Footer() {
                 </Container>
             </footer>
             <div className="footer-bottom" style={{ fontFamily: "Roboto" }}>
-                <p> ©  Infaaq Trust-2016 - All Rights Reserved | Powered by <span><a href="https://dgbirdmedia.com/" target="_blank" style={{ textDecorationLine: 'none' }}>Asta Systech</a></span> </p>
+                <p> ©  Infaaq Trust-2016 - All Rights Reserved | Created by <span className="gradient-text"><a href="https://dgbirdmedia.com/" target="_blank" style={{ textDecorationLine: 'none' }}>Asta Systech</a></span> </p>
             </div>
         </>
     )

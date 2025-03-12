@@ -31,7 +31,7 @@ export default function NavbarComponent() {
           <div className="d-flex justify-content-between align-items-center w-100">
             {/* Logo */}
             <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-              <img src="images/logos.jpg" alt="logo" style={{ width: '100px', height: '50px', marginRight: '10px' }} />
+              <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '100px', height: 'auto', marginRight: '10px' }} />
               <h5 className="mb-0 d-none d-sm-block" style={{ color: '#ffce05' }}>Al-Infaaq Welfare Association</h5>
             </Navbar.Brand>
 

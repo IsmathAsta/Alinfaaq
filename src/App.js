@@ -4,8 +4,7 @@ import './App.css';
 import Footer from './component/Footer';
 import NavbarComponent from './component/NavbarComponent';
 import Home from './component/Home';
-import SewingForm from './component/courseForm/SewingForm';
-import TailoringDetail from './component/courseDetails/TailoringDetail';
+import SoftwareForm from './component/courseForm/SoftwareForm';
 
 function App() {
   return (
@@ -13,8 +12,9 @@ function App() {
       <NavbarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/tailoringForm' element={<SewingForm/>}/>
-        <Route path='/tailoringDetail' element={<TailoringDetail/>}/>
+        {/* <Route path='/tailoringForm' element={<SewingForm/>}/>
+        <Route path='/tailoringDetail' element={<TailoringDetail/>}/> */}
+        <Route path='/register/spc' element={<SoftwareForm/>}/>
       </Routes>
       <Footer />
     </div>
