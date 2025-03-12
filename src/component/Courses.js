@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row, Button, Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Courses() {
@@ -7,7 +8,8 @@ export default function Courses() {
         {
             image: "images/sewing.jpg",
             title: "தையல் பயிலகம்",
-           description:"பெண்களுக்கு தையல் கற்றுத் தரும் இப்பயிற்சி, சுயதொழிலுக்கான முதன்மையான படியாக விளங்கும்.  இந்த வகுப்புகள் மூலம், பெண்கள் தன்னம்பிக்கையுடன் சுயதொழிலில் ஈடுபடலாம்."
+           description:"பெண்களுக்கு தையல் கற்றுத் தரும் இப்பயிற்சி, சுயதொழிலுக்கான முதன்மையான படியாக விளங்கும்.  இந்த வகுப்புகள் மூலம், பெண்கள் தன்னம்பிக்கையுடன் சுயதொழிலில் ஈடுபடலாம்.",
+           
         },
         {
             image: "images/aari.jpg",
@@ -17,9 +19,16 @@ export default function Courses() {
         {
             image: "images/computer.jpg",
             title: "சாப்ட்வேர் கோர்ஸ் பயிற்சி",
-            description:'மாணவர்கள் மற்றும் இளைஞர்களுக்கான அடிப்படை & மேம்பட்ட கணினி பயிற்சி, தொழில்நுட்ப உலகில் முன்னேறவும் கற்றுத் திறன் வளர்க்கவும் உதவும். இப்பயிற்சி வேலை வாய்ப்புகளை பெறவும், சுயதொழில் உருவாக்கவும் உதவுகிறது.'
+            description:'மாணவர்கள் மற்றும் இளைஞர்களுக்கான அடிப்படை & மேம்பட்ட கணினி பயிற்சி, தொழில்நுட்ப உலகில் முன்னேறவும் கற்றுத் திறன் வளர்க்கவும் உதவும். இப்பயிற்சி வேலை வாய்ப்புகளை பெறவும், சுயதொழில் உருவாக்கவும் உதவுகிறது.',
+            link:'/register/spc'
         },
     ];
+
+    const navigate = useNavigate();
+
+    const handleCourseDetail=(link)=>{
+        navigate(link)
+    }
 
     return (
         <>
@@ -43,7 +52,7 @@ export default function Courses() {
                                             {course.description}
                                         </Card.Text>
                                         <div className="lastpart">
-                                            <Button variant="success" className="mb-3">Register Now </Button>
+                                            <Button variant="success" className="mb-3" onClick={()=>handleCourseDetail(course.link)}>Register Now </Button>
                                            
                                         </div>
                                     </Card.Body>

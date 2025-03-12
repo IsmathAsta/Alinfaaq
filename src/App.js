@@ -1,23 +1,21 @@
 
+import { Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import About from './component/About';
-import BannerSlider from './component/BannerSlider';
-import Courses from './component/Courses';
-import Donate from './component/Donate';
 import Footer from './component/Footer';
 import NavbarComponent from './component/NavbarComponent';
-import Services from './component/Services';
-
+import Home from './component/Home';
+import SoftwareForm from './component/Form/SoftwareForm';
+import ScrollToTop from './component/ScrollToTop';
 function App() {
   return (
     <div className="App">
-     <NavbarComponent/>
-    <BannerSlider/>
-    <About/>
-    <Services/>
-    <Courses/>
-    <Donate/>
-    <Footer/>
+      <ScrollToTop/>
+      <NavbarComponent />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register/spc' element={<SoftwareForm/>}/>
+      </Routes>
+      <Footer />
     </div>
   );
 }
