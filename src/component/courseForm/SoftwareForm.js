@@ -287,6 +287,9 @@ export default function SoftwareForm() {
 
 
                 </Form>
+                <div class="footer-credit">
+        Created by <a href="https://astasystech.com" target="_blank" class="gradient-text">Asta Systech</a>
+    </div>
                 {/* Modal for Alerts */}
                 <Modal show={showModal} onHide={() => setShowModal(false)}>
                     <Modal.Header closeButton>

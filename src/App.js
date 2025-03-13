@@ -1,24 +1,19 @@
 
-import { Route, Router, Routes } from 'react-router-dom';
+import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './component/Footer';
-import NavbarComponent from './component/NavbarComponent';
-import Home from './component/Home';
 import SoftwareForm from './component/courseForm/SoftwareForm';
-import ScrollToTop from './component/ScrollToTop';
+import WorkInProgress from './component/courseForm/WorkInProgress';
 
 function App() {
   return (
     <div className="App">
-      <ScrollToTop/>
-      <NavbarComponent />
+
+
       <Routes>
-        <Route path='/' element={<Home />} />
-        {/* <Route path='/tailoringForm' element={<SewingForm/>}/>
-        <Route path='/tailoringDetail' element={<TailoringDetail/>}/> */}
-        <Route path='/register/spc' element={<SoftwareForm/>}/>
+        <Route path='*' element={<WorkInProgress />} />
+        <Route path='/register/SDC' element={<SoftwareForm />} />
       </Routes>
-      <Footer />
+
     </div>
   );
 }
