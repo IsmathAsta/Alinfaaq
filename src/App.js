@@ -10,8 +10,9 @@ function App() {
 
 
       <Routes>
-        <Route path='*' element={<WorkInProgress />} />
+        
         <Route path='/register/SDC' element={<SoftwareForm />} />
+        <Route path='*' element={<WorkInProgress />} />
       </Routes>
 
     </div>
