@@ -1,9 +1,13 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function NavbarComponent() {
   const location = useLocation();
+  const {i18n, t} =useTranslation();
+
+ 
 
   return (
     <>
@@ -13,14 +17,16 @@ export default function NavbarComponent() {
         className="text-white py-2 d-none d-lg-block"
       >
         <div className="container d-flex justify-content-between">
-          <div>
-            <i className="fa-solid fa-location-dot ms-3"></i> 4A, South Mohideen Pallivasal Street, Mpm, Tvl
+          <div className='sm-icons '>
+          <i className="fa-brands fa-square-facebook icons-size"></i>
+          <i className="fa-brands fa-square-instagram icons-size"></i>
+          <i className="fa-brands fa-square-twitter icons-size"></i>
           </div>
           <div>
             <h5>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h5>
           </div>
-          <div>
-            <i className="fa-brands fa-whatsapp"></i> +91-9585434368 / +91-8220347600
+          <div className='wp-icons '>
+            <i className="fa-brands fa-whatsapp " style={{fontSize:'25px'}}></i> +91-9585434368 / +91-8220347600
           </div>
         </div>
       </div>
@@ -31,8 +37,8 @@ export default function NavbarComponent() {
           <div className="d-flex justify-content-between align-items-center w-100">
             {/* Logo */}
             <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-              <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '100px', height: 'auto', marginRight: '10px' }} />
-              <h5 className="mb-0 d-none d-sm-block" style={{ color: '#ffce05' }}>Al-Infaaq Welfare Association</h5>
+              <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '18vh', marginRight: '10px' }} />
+             
             </Navbar.Brand>
 
             {/* Toggler Button */}
