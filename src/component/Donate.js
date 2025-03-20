@@ -7,7 +7,7 @@ export default function Donate() {
             <div className="donate-bg">
                 <Container>
                     <Row>
-                        <h2 style={{textAlign:'center',color:'#e69d00',fontWeight:'bold'}}>DONATE NOW</h2>
+                        <h2 style={{textAlign:'center',color:'#000',fontWeight:'bold', textShadow: '3px 3px 8px rgba(210, 210, 210, 0.9)'}}>DONATE NOW</h2>
                         <Col md={6} className="d-flex justify-content-center align-items-center mb-2">
 
                                 <div className="account-detail ">

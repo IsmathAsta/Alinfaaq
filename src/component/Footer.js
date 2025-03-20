@@ -10,10 +10,10 @@ export default function Footer() {
                     <Row>
                         <Col md={4}>
                             <img
-                                src="images/logos.jpg"
+                                src="images/AIWA_WHITE_LOGO.png"
                                 className="al_quran"
                                 alt="logo"
-                                style={{ width: '30%', height: 'auto',borderRadius:'15px' }} loading="lazy" />
+                                style={{ width: '35%', height: 'auto'}} loading="lazy" />
                             <hr className="logo-line" />
                             <p>நமது செயல்பாடுகள் அனைத்தும் நல்லுள்ளம் கொண்ட சகோதரர்களிடம் சாந்தா வசூல் செய்து அதன் மூலம் நற்பணிகளை மேற்கொண்டு வருகிறோம்..</p>
                            
@@ -30,10 +30,10 @@ export default function Footer() {
                             
                             <p> <i className="fa fa-location-dot"></i>&nbsp; 4A, South Mohideen Pallivasal Street,<br/> Melapalayam, Tirunelveli-627005</p>
                             <h5>Whatsapp:</h5>
-                            <p><i className="fa-brands fa-whatsapp fa-xl"></i>&nbsp;  +91-9585434368 / 
+                            <p><i className="fa-brands fa-whatsapp fa-xl"></i>&nbsp;  
                             +91-8220347600 </p>
-                            {/* <h5>Email:</h5>
-                            <p> <i className="fa fa-envelope"></i>&nbsp; teacher@readnlearn.uk</p> */}
+                            <h5>Phone:</h5>
+                            <p> <i className="fa fa-phone"></i>&nbsp; +91-9585434368 </p>
                             
                         </Col>
 

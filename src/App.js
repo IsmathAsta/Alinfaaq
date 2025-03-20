@@ -16,7 +16,8 @@ function App() {
         <Route path='/' element={<Home />} />
         {/* <Route path='/tailoringForm' element={<SewingForm/>}/>
         <Route path='/tailoringDetail' element={<TailoringDetail/>}/> */}
-        <Route path='/register/spc' element={<SoftwareForm/>}/>
+        <Route path='/courses/sdc-register' element={<SoftwareForm/>}/>
+      
       </Routes>
       <Footer />
     </div>

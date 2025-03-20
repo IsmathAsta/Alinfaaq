@@ -5,28 +5,41 @@ import { Link, useLocation } from 'react-router-dom';
 
 export default function NavbarComponent() {
   const location = useLocation();
-  const {i18n, t} =useTranslation();
+  const { t, i18n } = useTranslation();
 
- 
+  // Function to change language
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
       {/* Top Contact Bar */}
       <div
         style={{ backgroundImage: 'linear-gradient(to right, #e69d00 ,  #f1c152)' }}
-        className="text-white py-2 d-none d-lg-block"
+        className="text-black py-2 d-none d-lg-block"
       >
         <div className="container d-flex justify-content-between">
           <div className='sm-icons '>
-          <i className="fa-brands fa-square-facebook icons-size"></i>
-          <i className="fa-brands fa-square-instagram icons-size"></i>
-          <i className="fa-brands fa-square-twitter icons-size"></i>
+            <i className="fa-brands fa-square-facebook icons-size"></i>
+            <i className="fa-brands fa-square-instagram icons-size"></i>
+            <i className="fa-brands fa-square-twitter icons-size"></i>
+            {/* Language Selector */}
+            <select
+              onChange={(e) => changeLanguage(e.target.value)}
+              className="form-select me-3"
+              style={{ width: '120px' }}
+            >
+              <option value="ta">தமிழ்</option>
+              <option value="en">English</option>
+            </select>
+
           </div>
           <div>
             <h5>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h5>
           </div>
           <div className='wp-icons '>
-            <i className="fa-brands fa-whatsapp " style={{fontSize:'25px'}}></i> +91-9585434368 / +91-8220347600
+            <i className="fa-brands fa-whatsapp " style={{ fontSize: '25px' }}></i>+91-8220347600
           </div>
         </div>
       </div>
@@ -38,7 +51,7 @@ export default function NavbarComponent() {
             {/* Logo */}
             <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
               <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '18vh', marginRight: '10px' }} />
-             
+
             </Navbar.Brand>
 
             {/* Toggler Button */}
@@ -53,7 +66,7 @@ export default function NavbarComponent() {
                 className={location.pathname === '/' ? 'fw-bold' : ''}
                 style={{ color: location.pathname === '/' ? '#E69D00' : 'inherit' }}
               >
-                Home
+             Home
               </Nav.Link>
 
               <Nav.Link
