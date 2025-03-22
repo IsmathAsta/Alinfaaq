@@ -91,15 +91,15 @@ export default function NavbarComponent() {
               <NavDropdown title="Our Courses" id="courses-dropdown">
                 <NavDropdown.Item
                   as={Link}
-                  to="/quran"
-                  style={{ color: location.pathname === '/quran' ? '#E69D00' : 'inherit' }}
+                  to="/tailoringDetail"
+                  style={{ color: location.pathname === '/tailoringDetail' ? '#E69D00' : 'inherit' }}
                 >
                   Sewing Training
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
-                  to="/arabic"
-                  style={{ color: location.pathname === '/arabic' ? '#E69D00' : 'inherit' }}
+                  to="/softwareDetail"
+                  style={{ color: location.pathname === '/softwareDetail' ? '#E69D00' : 'inherit' }}
                 >
                   Software Course
                 </NavDropdown.Item>

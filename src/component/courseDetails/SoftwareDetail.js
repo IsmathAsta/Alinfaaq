@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Card, Button, Accordion, Row, Col, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-const TailoringDetail = () => {
+const SoftwareDetail = () => {
     const navigate = useNavigate(); 
 
     const handleScrollToContact = () => {
         // Navigate to contact page and append hash for scrolling to form
-        navigate('/courses/tc-register');
+        navigate('/courses/sdc-register');
     };
 
 
@@ -22,7 +22,7 @@ const TailoringDetail = () => {
             <p className="mt-3">
             Master Full Stack Development to build complete, dynamic web applications, covering both front-end and back-end technologies with real-world projects.
             </p>
-            <div className="d-flex gap-3 mt-4">
+            <div className="d-flex gap-3 mt-4 flex-wrap">
               <span className="badge bg-secondary p-2"><i class="fa-solid fa-clock-rotate-left" style={{color: "#ffffff"}}></i> 6 Month Course</span>
               <span className="badge bg-secondary p-2"><i class="fa-regular fa-hourglass-half" style={{color: "#ffffff"}}></i> 1 Hour Session</span>
               <span className="badge bg-secondary p-2"><i class="fa-solid fa-book-open" style={{color: "#ffffff"}}></i> 50+ Lessons</span>
@@ -55,7 +55,7 @@ const TailoringDetail = () => {
             </ul>
           </Col>
           <Col sm={12} md={12} lg={10} className="px-5">
-            <h2 className="fw-bold">UI/UX Design Course</h2>
+            <h2 className="fw-bold">Full Stack Web Development Course</h2>
             <hr />
             <p>
             This comprehensive course will equip you with the essential skills to build complete web applications, covering both front-end and back-end development. Whether you aim to become a full-stack developer or enhance your web development expertise, this course provides a strong foundation to create dynamic, responsive, and scalable applications. 
@@ -70,22 +70,22 @@ const TailoringDetail = () => {
       <hr />
       <Row className="gy-4">
         <Col sm={12} md={12} lg={3}>
-          <h4 style={{color:'#e69d00'}} className="fw-bold">01</h4>
+          <h4 style={{color:'#064683'}} className="fw-bold">01</h4>
           <h5 className="fw-bold">Building the Web</h5>
           <p>Understand how websites are structured using HTML, styled with CSS, and made interactive with JavaScript.</p>
         </Col>
         <Col sm={12} md={12} lg={3}>
-          <h4 className="fw-bold" style={{color:'#e69d00'}}>02</h4>
+          <h4 className="fw-bold" style={{color:'#064683'}}>02</h4>
           <h5 className="fw-bold">Creating Engaging Interfaces</h5>
           <p>Learn to develop dynamic and responsive user experiences using modern front-end frameworks and state management techniques.</p>
         </Col>
         <Col sm={12} md={12} lg={3}>
-          <h4 className="fw-bold" style={{color:'#e69d00'}}>03</h4>
+          <h4 className="fw-bold" style={{color:'#064683'}}>03</h4>
           <h5 className="fw-bold">Powering the Backend</h5>
           <p>Explore server-side programming, database management, and API development to handle data and user interactions.</p>
         </Col>
         <Col sm={12} md={12} lg={3}>
-          <h4 className="fw-bold" style={{color:'#e69d00'}}>04</h4>
+          <h4 className="fw-bold" style={{color:'#064683'}}>04</h4>
           <h5 className="fw-bold">Bringing Projects to Life</h5>
           <p> Master version control with Git and deploy applications seamlessly on cloud platforms for real-world accessibility.</p>
         </Col>
@@ -96,7 +96,7 @@ const TailoringDetail = () => {
       <hr />
       <Row className="gy-4">
         <Col sm={12} md={12} lg={6}>
-          <h4 className=""><span style={{color:'#e69d00'}}>01</span> Fundamentals of Web Development:</h4>
+          <h4 className=""><span style={{color:'#064683'}}>01</span> Fundamentals of Web Development:</h4>
          
           <ul className="section-title">
             <li>HTML5 for structuring</li>
@@ -105,7 +105,7 @@ const TailoringDetail = () => {
           </ul>
         </Col>
         <Col sm={12} md={12} lg={6}>
-          <h4 className=""><span style={{color:'#e69d00'}}>02</span> Front-End Development</h4>
+          <h4 className=""><span style={{color:'#064683'}}>02</span> Front-End Development</h4>
           <h5 className="fw-bold"></h5>
           <ul className="section-title">
             <li>JavaScript Frameworks</li>
@@ -115,7 +115,7 @@ const TailoringDetail = () => {
           </ul>
         </Col>
         <Col sm={12} md={12} lg={6}>
-          <h4 className=""><span style={{color:'#e69d00'}}>03</span>  Back-End Development</h4>
+          <h4 className=""><span style={{color:'#064683'}}>03</span>  Back-End Development</h4>
           <h5 className="fw-bold"></h5>
           <ul className="section-title">
             <li>Server-Side Languages like Node.js</li>
@@ -124,7 +124,7 @@ const TailoringDetail = () => {
           </ul>
         </Col>
         <Col sm={12} md={12} lg={6}>
-          <h4 className=""><span style={{color:'#e69d00'}}>04</span> Other Important Topics</h4>
+          <h4 className=""><span style={{color:'#064683'}}>04</span> Other Important Topics</h4>
           <h5 className="fw-bold"></h5>
           <ul className="section-title">
             <li>Version Control (Git)</li>
@@ -165,4 +165,4 @@ const TailoringDetail = () => {
     );
 };
 
-export default TailoringDetail;
+export default SoftwareDetail;

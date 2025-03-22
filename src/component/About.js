@@ -10,7 +10,7 @@ export default function About() {
             title: "👗 Tailoring Course",
             date: "Ongoing Registrations",
             details: "Click Here to Apply",
-            link: ""
+            link: "/courses/tc-register"
         },
 
         {

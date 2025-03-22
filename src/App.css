@@ -796,5 +796,21 @@ margin-left: 5px;
 .form-check {
 margin-bottom: 5px; /* Prevent labels from shifting */
 }
-
-
+/****tailoring detail***********/
+.section-title {
+  position: relative;
+  margin-left: 5%;
+  
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #e69d00;
+}
+.section-title li{
+  
+}
