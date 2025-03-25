@@ -7,23 +7,23 @@ export default function About() {
     const { t } = useTranslation();
     const notices = [
         {
-            title: "👗 Tailoring Course",
+            title: t("TailoringCourse"),
             date: "Ongoing Registrations",
             details: "Click Here to Apply",
             link: "/courses/tc-register"
         },
 
         {
-            title: "💻 Software Development Course",
+            title: t("SoftwareCourse"),
             date: "Ongoing Registrations",
             details: "Click Here to Apply",
             link: '/courses/sdc-register'
 
         },
         {
-            title: "🧵 Embroidery & Aari Work",
+            title: t("EmbroideryCourse"),
             date: "Coming Soon",
-            details: "Master embroidery and aari work techniques for traditional designs."
+            details: t("EmbroideryDetails")
         },
 
     ];
@@ -46,7 +46,7 @@ export default function About() {
                                     </div> */}
                                     <div className="welcome-heading">
                                         <h5 style={{ color: '#e69d00' }}>About Us</h5>
-                                        <h1>Allah Help Those Who Help Themselves</h1>
+                                        <h2>{t("elevate_lives")}</h2>
                                     </div>
                                     <div className="about-para">
                                         <p style={{ fontFamily: "Roboto", fontSize: '16px' }}>{t("AboutUsContent")}</p>

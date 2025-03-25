@@ -9,6 +9,9 @@ import ScrollToTop from './component/ScrollToTop';
 import TailoringDetail from './component/courseDetails/TailoringDetail';
 import SoftwareDetail from './component/courseDetails/SoftwareDetail';
 import SewingForm from './component/courseForm/SewingForm';
+import Aboutus from './component/Aboutus';
+import ServicePage from './component/ServicePage';
+import Contactus from './component/Contactus';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <NavbarComponent />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/aboutus' element={<Aboutus/>}/>
+        <Route path='/services' element={<ServicePage/>}/>
+        <Route path='/contactus' element={<Contactus/>}/>
         {/* <Route path='/tailoringForm' element={<SewingForm/>}/>*/}
         <Route path='/tailoringDetail' element={<TailoringDetail/>}/> 
         <Route path='/softwareDetail' element={<SoftwareDetail/>}/>

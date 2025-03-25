@@ -80,9 +80,9 @@ export default function NavbarComponent() {
 
               <Nav.Link
                 as={Link}
-                to="/whyreadnlearn"
-                className={location.pathname === '/whyreadnlearn' ? 'fw-bold' : ''}
-                style={{ color: location.pathname === '/whyreadnlearn' ? '#E69D00' : 'inherit' }}
+                to="/services"
+                className={location.pathname === '/services' ? 'fw-bold' : ''}
+                style={{ color: location.pathname === '/services' ? '#E69D00' : 'inherit' }}
               >
                 Services
               </Nav.Link>
