@@ -45,8 +45,8 @@ export default function About() {
                                         <p>ABOUT US</p>
                                     </div> */}
                                     <div className="welcome-heading">
-                                        <h5 style={{ color: '#e69d00' }}>About Us</h5>
-                                        <h2>{t("elevate_lives")}</h2>
+                                        <h2 style={{ color: '#e69d00' }}>About Us</h2>
+                                       
                                     </div>
                                     <div className="about-para">
                                         <p style={{ fontFamily: "Roboto", fontSize: '16px' }}>{t("AboutUsContent")}</p>

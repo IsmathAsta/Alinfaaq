@@ -16,33 +16,41 @@ export default function NavbarComponent() {
     <>
       {/* Top Contact Bar */}
       <div
-        style={{ backgroundImage: 'linear-gradient(to right, #e69d00 ,  #f1c152)' }}
-        className="text-black py-2 d-none d-lg-block"
+  style={{ backgroundImage: 'linear-gradient(to right, #e69d00 ,  #f1c152)' }}
+  className="text-black py-2"
+>
+  <div className="container d-flex flex-wrap justify-content-between align-items-center">
+    
+    {/* Left: Social Icons & Language */}
+    <div className="d-flex align-items-center gap-4 flex-wrap">
+      <i className="fa-brands fa-square-facebook icons-size" style={{ fontSize: '25px' }}></i>
+      <i className="fa-brands fa-square-instagram icons-size" style={{ fontSize: '25px' }}></i>
+      <i className="fa-brands fa-square-twitter icons-size" style={{ fontSize: '25px' }}></i>
+      <select
+        onChange={(e) => changeLanguage(e.target.value)}
+        className="form-select form-select-sm"
+        style={{ width: '100px' }}
       >
-        <div className="container d-flex justify-content-between">
-          <div className='sm-icons '>
-            <i className="fa-brands fa-square-facebook icons-size"></i>
-            <i className="fa-brands fa-square-instagram icons-size"></i>
-            <i className="fa-brands fa-square-twitter icons-size"></i>
-            {/* Language Selector */}
-            <select
-              onChange={(e) => changeLanguage(e.target.value)}
-              className="form-select me-3"
-              style={{ width: '120px' }}
-            >
-              <option value="ta">தமிழ்</option>
-              <option value="en">English</option>
-            </select>
+        <option value="ta">தமிழ்</option>
+        <option value="en">English</option>
+      </select>
+    </div>
 
-          </div>
-          <div>
-            <h5>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h5>
-          </div>
-          <div className='wp-icons '>
-            <i className="fa-brands fa-whatsapp " style={{ fontSize: '25px' }}></i>+91-8220347600
-          </div>
-        </div>
-      </div>
+    {/* Center: Arabic Text */}
+    <div className="text-center flex-grow-1 d-none d-lg-block">
+      <h6 className="m-0" style={{ fontSize: '16px' }}>
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </h6>
+    </div>
+
+    {/* Right: WhatsApp */}
+    <div className="d-flex align-items-center gap-2">
+      <i className="fa-brands fa-whatsapp" style={{ fontSize: '20px' }}></i>
+      <span className="fw-semibold" style={{ fontSize: '15px' }}>+91-8220347600</span>
+    </div>
+
+  </div>
+</div>
 
       {/* Navbar */}
       <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" className="shadow">

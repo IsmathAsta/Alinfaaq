@@ -45,7 +45,7 @@ export default function Courses() {
                             <Col sm={12} md={12} lg={4} key={index} className="mb-3">
                                 <Card className="course-card mb-4">
                                     <Card.Img variant="top" src={course.image} />
-                                    <Card.Body >
+                                    <Card.Body className="d-flex flex-column justify-content-between">
                                         <Card.Title>
                                             <h2 style={{fontFamily:"Roboto"}}>{course.title}</h2>
 
