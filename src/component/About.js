@@ -22,8 +22,9 @@ export default function About() {
         },
         {
             title: t("EmbroideryCourse"),
-            date: "Coming Soon",
-            details: t("EmbroideryDetails")
+            date: "Ongoing Registrations",
+            details:"Click Here to Apply",
+            link: '/courses/ac-register'
         },
 
     ];
@@ -76,7 +77,7 @@ export default function About() {
                                                         {notice.details}
                                                     </Link>
                                                 ) : (
-                                                    <span>{notice.details}</span>
+                                                    <span></span>
                                                 )}
                                             </div>
                                         ))}

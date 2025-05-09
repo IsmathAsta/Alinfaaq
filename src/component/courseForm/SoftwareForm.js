@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Alert, Button, Form, Modal, Spinner } from "react-bootstrap";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebaseConfig/firebaseConfig";
+import { useTranslation } from "react-i18next";
 
 export default function SoftwareForm() {
-    const SUPABASE_URL = "https://luetuvysehnhaxaaacnh.supabase.co";  // Replace with your Supabase URL
-    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1ZXR1dnlzZWhuaGF4YWFhY25oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0NzA1NzQsImV4cCI6MjA1NzA0NjU3NH0.VbwnKgmVnaeiao6GbnONf4wcIC7DYDe00ASN4h_V-bM";  // Replace with your Supabase Key
-
+     const {t} = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         gender: '',
@@ -93,21 +94,11 @@ export default function SoftwareForm() {
 
         setLoading(true);
 
-        try {
-            let response = await fetch(`${SUPABASE_URL}/rest/v1/software_registrations`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "apikey": SUPABASE_KEY,
-                    "Authorization": `Bearer ${SUPABASE_KEY}`,
-                },
-                body: JSON.stringify(formData),
-            });
+        try{
+            const docRef = await addDoc(collection(db, "softwareForm"),formData );
 
-            let result = await response.text();
-            let jsonResult = result ? JSON.parse(result) : {};
 
-            if (response.ok) {
+            if (docRef.id) {
                 setModalMessage("🎉 Registration successful! Our team will contact you soon.");
                 setFormData({
                     name: "",
@@ -122,7 +113,7 @@ export default function SoftwareForm() {
                 });
             } else {
                 setModalMessage("❌ Registration failed. Please try again.");
-                console.error("Error:", jsonResult)
+                console.error("Error:")
             }
         } catch (error) {
             setModalMessage("⚠️ Registration failed. Please try again later.");
@@ -151,7 +142,7 @@ export default function SoftwareForm() {
                 <Form onSubmit={handleSubmit}>
                     <Form.Group>
                         {/**Name */}
-                        <Form.Label>Name <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t("name")} <span className="text-danger">*</span></Form.Label>
                         <Form.Control type="text" placeholder="Enter your name" name="name" value={formData.name} onChange={handleChange} />
                         <p className="text-danger">{errors.name}</p>
                     </Form.Group>
@@ -159,7 +150,7 @@ export default function SoftwareForm() {
                     {/**Gender */}
                     <Form.Group>
                         <Form.Label>
-                            Gender <span className="text-danger">*</span>
+                        {t("gender")} <span className="text-danger">*</span>
                         </Form.Label>
                         <p className="gender-note">
                             Currently not available for female students. For details,{" "}
@@ -171,7 +162,7 @@ export default function SoftwareForm() {
                         {/* Male Option */}
                         <Form.Check
                             type="radio"
-                            label="Male"
+                            label={t("male")}
                             name="gender"
                             value="Male"
                             checked={formData.gender === "Male"}
@@ -180,7 +171,7 @@ export default function SoftwareForm() {
                         {/**female option */}
                         <Form.Check
                             type="radio"
-                            label="Female"
+                            label={t("female")}
                             name="gender"
                             value="Female"
                             disabled
@@ -191,35 +182,35 @@ export default function SoftwareForm() {
 
                     {/* dateOfBirth */}
                     <Form.Group className="mb-3">
-                        <Form.Label>Date of Birth <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t('dateOfBirth')} <span className="text-danger">*</span></Form.Label>
                         <Form.Control type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleChange} />
                         <p className="text-danger">{errors.dateOfBirth}</p>
                     </Form.Group>
 
                     {/* Mobile */}
                     <Form.Group className="mb-3">
-                        <Form.Label>Mobile Number (WhatsApp) <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t('mobile')} (WhatsApp) <span className="text-danger">*</span></Form.Label>
                         <Form.Control type="text" name="mobile" value={formData.mobile} onChange={handleChange} />
                         <p className="text-danger">{errors.mobile}</p>
                     </Form.Group>
 
                     {/*Alternative Mobile (optional)*/}
                     <Form.Group className="mb-3">
-                        <Form.Label>Alternate Mobile Number</Form.Label>
+                        <Form.Label>{t('alternateNumber')}</Form.Label>
                         <Form.Control type="text" name="alternateNumber" value={formData.alternateNumber} onChange={handleChange} />
                         <p className="text-danger">{errors.alternateNumber}</p>
                     </Form.Group>
 
                     {/* Email Field (optional)*/}
                     <Form.Group className="mb-2">
-                        <Form.Label>Email</Form.Label>
+                        <Form.Label>{t('email')}</Form.Label>
                         <Form.Control type="email" placeholder="Enter your email" name="email" value={formData.email} onChange={handleChange} />
                         <p className="text-danger">{errors.email}</p>
                     </Form.Group>
 
                     {/* Experience */}
                     <Form.Group className="mb-3">
-                        <Form.Label>Experience <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t('experience')} <span className="text-danger">*</span></Form.Label>
                         <Form.Check type="radio" name="experience" label="Working professional - IT" value="workingit" checked={formData.experience === "workingit"} onChange={handleChange}/>
                         <Form.Check type="radio" name="experience" label="Working professional - Non-IT" value="workingnonit" checked={formData.experience === "workingnonit"} onChange={handleChange}/>
                         <Form.Check type="radio" name="experience" label="College student - Final year" value="finalyear" checked={formData.experience === "finalyear"} onChange={handleChange}/>
@@ -230,7 +221,7 @@ export default function SoftwareForm() {
 
                     {/* Graduation Year Field */}
                     <Form.Group className="mb-3">
-                        <Form.Label>Graduation Year <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t('graduationYear')} <span className="text-danger">*</span></Form.Label>
                         <Form.Select
                             name="graduationYear"
                             value={formData.graduationYear}
@@ -247,7 +238,7 @@ export default function SoftwareForm() {
 
                     {/* Time Slot Field */}
                     <Form.Group className="mb-3">
-                        <Form.Label>Time Slot <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t('timeSlot')} <span className="text-danger">*</span></Form.Label>
                         <Form.Check
                             type="radio"
                             label="7:00 - 8:00 PM (Not Available)"

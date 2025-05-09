@@ -12,6 +12,7 @@ import SewingForm from './component/courseForm/SewingForm';
 import Aboutus from './component/Aboutus';
 import ServicePage from './component/ServicePage';
 import Contactus from './component/Contactus';
+import AariForm from './component/courseForm/AariForm';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/softwareDetail' element={<SoftwareDetail/>}/>
         <Route path='/courses/sdc-register' element={<SoftwareForm/>}/>
         <Route path='/courses/tc-register' element={<SewingForm/>}/>
+        <Route path='/courses/ac-register' element={<AariForm/>}/>
       
       </Routes>
       <Footer />

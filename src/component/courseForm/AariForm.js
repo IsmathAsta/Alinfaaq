@@ -4,8 +4,9 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig/firebaseConfig";
 import { useTranslation } from "react-i18next";
 
-export default function SewingForm() {
-const {t} = useTranslation();
+export default function AariForm() {
+    const {t} = useTranslation();
+
     const [formData, setFormData] = useState({
         name: '',
     gender: '',
@@ -82,7 +83,7 @@ const handleSubmit = async(e) =>{
     setLoading(true);
 
     try{
-        const docRef = await addDoc(collection(db, "tailoringForm"), {
+        const docRef = await addDoc(collection(db, "aariForm"), {
             name: formData.name,
             gender: formData.gender,
             age: formData.age, // Ensure the field for date of birth is captured
@@ -122,54 +123,6 @@ const handleSubmit = async(e) =>{
     setLoading(false);
 }
 
-
-    // Handle form submission
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     if (!validateForm()) return;
-
-    //     setLoading(true);
-
-    //     try {
-    //         let response = await fetch(`${SUPABASE_URL}/rest/v1/software_registrations`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 "apikey": SUPABASE_KEY,
-    //                 "Authorization": `Bearer ${SUPABASE_KEY}`,
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
-
-    //         let result = await response.text();
-    //         let jsonResult = result ? JSON.parse(result) : {};
-
-    //         if (response.ok) {
-    //             setModalMessage("🎉 Registration successful! Our team will contact you soon.");
-    //             setFormData({
-    //                 name: "",
-    //                 gender: "",
-    //                 age: "",
-    //                 mobile: "",
-    //                 alternateNumber: "",
-    //                 email: "",
-    //                 graduationYear: "",
-    //                 experience: "",
-    //                 timeSlot: "",
-    //             });
-    //         } else {
-    //             setModalMessage("❌ Registration failed. Please try again.");
-    //             console.error("Error:", jsonResult)
-    //         }
-    //     } catch (error) {
-    //         setModalMessage("⚠️ Registration failed. Please try again later.");
-    //         console.error("Error:", error);
-    //     }
-
-    //     setShowModal(true);
-    //     setLoading(false);
-    // };
-
     return (
         <div className="registerform">
             <div className="form-container">
@@ -180,15 +133,15 @@ const handleSubmit = async(e) =>{
                     </div>
                     <div>
                         <div className="brand-text">Al INFAAQ WELFARE ASSOCIATION</div>
-                        <div className="brand-description">Join our FREE tailoring course and master the latest sewing techniques while exploring exciting career opportunities in the fashion industry!</div>
+                        <div className="brand-description">Join our FREE Aari course and master the latest sewing techniques while exploring exciting career opportunities in the fashion industry!</div>
                     </div>
                 </div>
 
-                <h6>Fill out the form below to enroll in our<span className="gradient-text"> Free Tailoring</span> course</h6>
+                <h6>Fill out the form below to enroll in our<span className="gradient-text"> Free Aari</span> course</h6>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group>
                         {/**Name */}
-                        <Form.Label>{t("name")}  <span className="text-danger">*</span></Form.Label>
+                        <Form.Label>{t("name")} <span className="text-danger">*</span></Form.Label>
                         <Form.Control type="text" placeholder="Enter your name" name="name" value={formData.name} onChange={handleChange} />
                         <p className="text-danger">{errors.name}</p>
                     </Form.Group>
@@ -235,7 +188,7 @@ const handleSubmit = async(e) =>{
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>{t('mobile')}<span className="text-danger">*</span></Form.Label>
+                    <Form.Label>{t('mobile')} <span className="text-danger">*</span></Form.Label>
                     <Form.Control type="text" name="mobile" value={formData.mobile} onChange={handleChange} />
                     <p className="text-danger">{errors.mobile}</p>
                 </Form.Group>
@@ -260,9 +213,7 @@ const handleSubmit = async(e) =>{
                     <Form.Check type="radio" label="10:00 - 11:00 AM" name="timeSlot" value="10-11 AM" onChange={handleChange} />
                     <Form.Check type="radio" label="11:00 - 12:00 PM" name="timeSlot" value="11-12 PM" onChange={handleChange} />
                     <Form.Check type="radio" label="12:00 - 1:00 PM" name="timeSlot" value="12-1 PM" onChange={handleChange} />
-                    <Form.Check type="radio" label="3:00 - 4:00 PM" name="timeSlot" value="3-4 PM" onChange={handleChange} />
-                    <Form.Check type="radio" label="4:00 - 5:00 PM" name="timeSlot" value="4-5 PM" onChange={handleChange} />
-                    <Form.Check type="radio" label="5:00 - 6:00 PM" name="timeSlot" value="5-6 PM" onChange={handleChange} />
+                    
                  
                     <p className="text-danger">{errors.timeSlot}</p>
                 </Form.Group>
@@ -274,15 +225,15 @@ const handleSubmit = async(e) =>{
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>{t('tailoringreason')}:<br/> {t('hasStartBusiness')}</Form.Label>
+                    <Form.Label>{t('aarireason')}:<br/> {t('hasStartBusiness')}</Form.Label>
                     <Form.Check type="radio" name="hasStartBusiness" label={t('yes')} value="Yes" checked={formData.hasStartBusiness === "Yes"} onChange={handleChange} />
-                    <Form.Check type="radio" name="hasStartBusiness" label="No" value="No" checked={formData.hasStartBusiness === "No"} onChange={handleChange} />
+                    <Form.Check type="radio" name="hasStartBusiness" label={t('no')} value="No" checked={formData.hasStartBusiness === "No"} onChange={handleChange} />
                 </Form.Group>
 
                 <Form.Group className="mb-3">
-                    <Form.Label>{t('hasExperienceTailor')}<span className="text-danger">*</span></Form.Label>
+                    <Form.Label>{t('hasExperience')} <span className="text-danger">*</span></Form.Label>
                     <Form.Check type="radio" name="hasExperience" label={t('yes')} value="Yes" checked={formData.hasExperience === "Yes"} onChange={handleChange} />
-                    <Form.Check type="radio" name="hasExperience" label="No" value="No" checked={formData.hasExperience === "No"} onChange={handleChange} />
+                    <Form.Check type="radio" name="hasExperience" label={t('no')} value="No" checked={formData.hasExperience === "No"} onChange={handleChange} />
                     <p className="text-danger">{errors.hasExperience}</p>
                 </Form.Group>
                     {loading && (
@@ -301,7 +252,7 @@ const handleSubmit = async(e) =>{
 
                     {/* Privacy Notice */}
                     <p className="mt-3 privacy-text">
-                        I authorize AL INFAAQ Welfare Association to contact me with course updates via Email/SMS/WhatsApp/Call.
+                    I authorize AL INFAAQ Welfare Association to contact me with course updates via Email/SMS/WhatsApp/Call.
                     </p>
 
 
