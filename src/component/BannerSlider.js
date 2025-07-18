@@ -5,6 +5,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Button } from "react-bootstrap";
 
 const BannerSlider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -12,19 +13,19 @@ const BannerSlider = () => {
   const slides = [
     {
       image: "images/banner3.jpg",
-      title: "Quran 2:272",
-      description: "(நபியே!) அவர்களை நேர்வழியில் நடத்துவது உம் கடமையல்ல; ஆனால், தான் நாடியவர்களை அல்லாஹ் நேர்வழியில் செலுத்துகின்றான்; இன்னும், நல்லதில் நீங்கள் எதைச் செலவிடினும், அது உங்களுக்கே நன்மை பயப்பதாகும்; அல்லாஹ்வின் திருமுகத்தை நாடியே அல்லாது (வீண் பெருமைக்காகச்) செலவு செய்யாதீர்கள்; நல்லவற்றிலிருந்து நீங்கள் எதைச் செலவு செய்தாலும், அதற்குரிய நற்பலன் உங்களுக்குப் பூரணமாகத் திருப்பிக் கொடுக்கப்படும்; நீங்கள் அநியாயம் செய்யப் -படமாட்டீர்கள்.",
+      title: "Allah Help Those Who Help Themselves",
+      description: "Al-Infaaq Trust 2016 ஆம் ஆண்டில் தொடங்கப்பட்டது. ஆரம்பத்தில் ஒரே ஒரு குடும்பத்துக்கு உதவியாக இருந்தோம், ஆனால் இன்று 60 குடும்பங்களுக்கு ஆதரவளித்துள்ளோம், தற்பொழுது 30 குடும்பங்களுக்கு உதவியளிக்கிறோம். அத்தியாவசிய உதவி, திறன் மேம்பாட்டு பயிற்சி மற்றும் IT கல்வியை வழங்குவதன் மூலம் சமூகங்களை உயர்த்துவதில் நாங்கள் ஈடுபட்டுள்ளோம்.",
     },
     {
-        image: "images/banner2.jpg",
-        title: "Master  Recitation and Tajweed!",
-        description: "Expand Your Knowledge with Our Diverse Islamic Courses.",
-      },
-      {
-        image: "images/banner.jpg",
-        title: "Master Quranic Recitation and Tajweed!",
-        description: "Expand Your Knowledge with Our Diverse Islamic Courses.",
-      },
+      image: "images/banner2.jpg",
+      title: "Master  Recitation and Tajweed!",
+      description: "Expand Your Knowledge with Our Diverse Islamic Courses.",
+    },
+    {
+      image: "images/banner.jpg",
+      title: "Master Quranic Recitation and Tajweed!",
+      description: "Expand Your Knowledge with Our Diverse Islamic Courses.",
+    },
   ];
 
   return (
@@ -47,27 +48,32 @@ const BannerSlider = () => {
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height: "700px",
+                height: "500px",
               }}
             >
-             {/* Black Overlay */}
-<div 
-  className="position-absolute top-0 start-0 w-100 h-100"
-  style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-></div>
+              {/* Black Overlay */}
+              <div
+                className="position-absolute top-0 start-0 w-100 h-100"
+                style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+              ></div>
               {/* Text Content */}
               <div
-                className={`p-4 rounded w-75 mx-auto position-relative ${
-                  activeSlide === index ? "animate__animated animate__fadeInLeft" : ""
-                }`}
+                className={`p-4 rounded w-75 mx-auto position-relative ${activeSlide === index ? "animate__animated animate__fadeInLeft" : ""
+                  }`}
               >
                 <h3 className="fw-bold">{slide.title}</h3>
                 <p className="slide-txt">{slide.description}</p>
+                <div className="banner-btn">
+                  <button className="donate-btn">Donate Now</button>
+                  <button className="servicess-btn">Our Services</button>
+                </div>
+
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      </div>
-  )}
-  export default BannerSlider;
+    </div>
+  )
+}
+export default BannerSlider;

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Al INFAAQ Welfare Association - Webinar Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        /* Branding Header */
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .brand-logo img {
+            width: 160px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .brand-text {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        .brand-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+        .brand-header {
+            display: flex;
+            flex-direction: column; /* Stack logo and text vertically */
+            align-items: center; /* Center align */
+            text-align: center;
+        }
+        .brand-logo img {
+            width: 80px; /* Adjust logo size if needed */
+            margin-bottom: 10px; /* Add spacing below logo */
+        }
+        }
+
+        /* Heading with Gradient Text */
+        .form-container h2 {
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ff4081, #ff9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        /* Form Elements */
+        .form-label {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .required {
+            color: red;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #ffcf0f;
+            color:black;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: rgb(244, 234, 44);
+        }
+        .btn-submit i {
+            margin-left: 8px;
+        }
+        .privacy-text {
+            font-size: 12px;
+            color: gray;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .privacy-text a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        /* Time Slot Buttons */
+        .time-slot-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .time-slot-btn {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            min-width: 120px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .time-slot-btn:hover, .time-slot-btn.active {
+            background: #ffcf0f;
+            color: white;
+        }
+        .time-slot-btn.disabled {
+            background: #f5f5f5;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+        .disabled-label {
+            font-size: 12px;
+            color: red;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .gender-note {
+    font-size: 10px;  /* Small text */
+    color: red; /* Red text */
+    font-weight: normal;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+        .contact-link {
+            color: #007bff; /* Standard blue link color */
+            font-size: 10px;  /* Small text */
+            text-decoration: none;
+            font-weight: normal;
+        }
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer-credit {
+    font-size: 12px;  /* Small text */
+    color: gray; /* Light color */
+    text-align: center;
+    margin-top: 20px; /* Space from form */
+}
+
+.credit-link {
+    color: #ffcf0f; /* Highlighted color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.credit-link:hover {
+    text-decoration: underline;
+}
+.text-danger {
+    font-size: 12px;  /* Make error messages smaller */
+    color: red;  /* Ensure messages are red */
+    margin-top: 2px;  /* Small spacing */
+    display: block;  /* Ensures error message appears below input */
+}
+.form-control,
+.form-check {
+    margin-bottom: 5px; /* Prevent labels from shifting */
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <div class="brand-logo">
+            <img src="AIWA_YELLOW_LOGO.png" alt="AIWA Logo">
+        </div>
+        <div>
+            <div class="brand-text">Al INFAAQ WELFARE ASSOCIATION</div>
+            <div class="brand-description">Join our FREE course and learn the about the latest technologies required for Full Stack web development and explore the career opportunities in Software development.</div>
+        </div>
+    </div>
+    
+    
+
+    <h6>Fill out the form below to enroll in our<span class="gradient-text"> Free Full Stack Web Development</span> course</h6>
+    <form id="registrationForm">
+        <!-- Name -->
+        <label class="form-label">Name <span class="required">*</span></label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <small id="nameError" class="text-danger"></small>
+    
+        <!-- Gender -->
+        <label class="form-label">Gender <span class="required">*</span></label>
+        <div class="gender-note">
+            Currently not available for female students.For details,
+            <a href="tel:+919585434368" class="contact-link">Contact us</a>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" value="Male">
+            <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" value="Female" disabled>
+            <label class="form-check-label">Female</label>
+        </div>
+        <small id="genderError" class="text-danger"></small>
+        
+    
+        <!-- Date of Birth -->
+        <label class="form-label">Date of Birth <span class="required">*</span></label>
+        <input type="date" class="form-control" id="dob">
+        <small id="dobError" class="text-danger"></small>
+    
+    
+        <label class="form-label">Mobile Number (WhatsApp) <span class="required">*</span></label>
+        <input type="tel" class="form-control" id="mobile" placeholder="Enter Mobile number">
+        <small id="mobileError" class="text-danger"></small>
+    
+        <!-- Alternate Mobile Number (Optional) -->
+        <label class="form-label">Alternate Mobile Number</label>
+        <input type="tel" class="form-control" id="alternate" placeholder="Enter alternate number">
+        <small id="alternateError" class="text-danger"></small>
+    
+        <!-- Email (Optional) -->
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        <small id="emailError" class="text-danger"></small>
+
+        <!-- Experience Selection -->
+        <label class="form-label">Experience <span class="required">*</span></label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="experience" value="workingit">
+            <label class="form-check-label">Working professional - IT</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="experience" value="workingnonit">
+            <label class="form-check-label">Working professional - Non-IT</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="experience" value="finalyear">
+            <label class="form-check-label">College student - Final year</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="experience" value="prefinalyear">
+            <label class="form-check-label">College student - 1st to pre-final year</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="experience" value="others">
+            <label class="form-check-label">Others</label>
+        </div>
+        <small id="experienceError" class="text-danger"></small>
+    
+        <!-- Graduation Year -->
+        <label class="form-label">Graduation Year <span class="required">*</span></label>
+        <select class="form-control" id="graduationYear">
+            <option value="">Select Graduation Year</option>
+            <option value="Not Applicable">Not Applicable</option>
+            <script>
+                for(let year = new Date().getFullYear(); year >= 2003; year--) {
+                    document.write(`<option value="${year}">${year}</option>`);
+                }
+            </script>
+        </select>
+        <small id="graduationYearError" class="text-danger"></small>
+    
+        <!-- Time Slot -->
+        <label class="form-label">Time Slot <span class="required">*</span></label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="timeSlot" value="7-8 PM" disabled>
+            <label class="form-check-label">7:00 - 8:00 PM (Not Available)</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="timeSlot" value="9-10 PM">
+            <label class="form-check-label">9:00 - 10:00 PM</label>
+        </div>
+        <small id="timeSlotError" class="text-danger"></small>
+        <div id="loader" style="display: none; text-align: center; margin-top: 10px;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Processing...</span>
+            </div>
+            <p>Please wait...</p>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" id="submitBtn" class="btn-submit mt-4">Submit</button>
+      <!-- Privacy & Authorization Notice -->
+            <p class="privacy-text">
+                I authorize AL INFAAQ Welfare Association to contact me with course updates via Email/SMS/Whatsapp/Call.
+            </p>
+    </form>
+    <div id="alertContainer"></div>
+
+    <div class="footer-credit">
+        Created by <a href="https://astasystech.com" target="_blank" class="gradient-text">Asta Systech</a>
+    </div>
+    <!-- Bootstrap Alert Modal -->
+<div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alertModalLabel">Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="alertMessage">
+          <!-- Alert message will be injected here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- Bootstrap JS (Required for Modal to Work) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const SUPABASE_URL = "https://luetuvysehnhaxaaacnh.supabase.co";  // Replace with your Supabase URL
+    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx1ZXR1dnlzZWhuaGF4YWFhY25oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0NzA1NzQsImV4cCI6MjA1NzA0NjU3NH0.VbwnKgmVnaeiao6GbnONf4wcIC7DYDe00ASN4h_V-bM";  // Replace with your Supabase Key
+
+   document.getElementById("registrationForm").addEventListener("submit", async function(event) {
+    event.preventDefault(); // Prevent default form submission
+    let valid = true;
+
+    // Clear previous alert messages
+    document.getElementById("alertMessage").innerHTML = "";
+    document.getElementById("loader").style.display = "block"; // Show loader
+    document.getElementById("submitBtn").disabled = true; // Disable submit button
+
+
+    // Name Validation
+    let name = document.getElementById("name").value.trim();
+    if (name === "" || name.length > 100) {
+        showError("nameError", "Name is required (Max 100 characters)");
+        valid = false;
+    } else {
+        clearError("nameError");
+    }
+
+    // Gender Validation
+    let gender = document.querySelector('input[name="gender"]:checked');
+    if (!gender) {
+        showError("genderError", "Please select a gender.");
+        valid = false;
+    } else {
+        clearError("genderError");
+    }
+
+    // Date of Birth Validation (16-35 years)
+    let dob = document.getElementById("dob").value;
+    if (!dob || !validateAge(dob, 16, 35)) {
+        showError("dobError", "Age must be between 16 and 35 years.");
+        valid = false;
+    } else {
+        clearError("dobError");
+    }
+
+    // Mobile Number Validation (10-digit valid number)
+    let mobileNumber = document.getElementById("mobile").value.trim();
+    if (!/^\d{10}$/.test(mobileNumber)) {
+        showError("mobileError", "Enter a valid 10-digit mobile number.");
+        valid = false;
+    } else {
+        clearError("mobileError");
+    }
+
+    // Alternate Mobile Number Validation (Optional, must be valid if entered)
+    let alternateNumber = document.getElementById("alternate").value.trim();
+    if (alternateNumber !== "" && !/^\d{10}$/.test(alternateNumber)) {
+        showError("alternateError", "Enter a valid 10-digit mobile number.");
+        valid = false;
+    } else {
+        clearError("alternateError");
+    }
+
+    // Email Validation (Optional, must be valid if entered)
+    let email = document.getElementById("email").value.trim();
+    if (email !== "" && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        showError("emailError", "Enter a valid email address.");
+        valid = false;
+    } else {
+        clearError("emailError");
+    }
+
+    // Graduation Year Validation
+    let graduationYear = document.getElementById("graduationYear").value;
+    if (graduationYear === "") {
+        showError("graduationYearError", "Select your graduation year.");
+        valid = false;
+    } else {
+        clearError("graduationYearError");
+    }
+
+    // Experience Validation
+    let experience = document.querySelector('input[name="experience"]:checked');
+    if (!experience) {
+        showError("experienceError", "Please select the relevant experience");
+        valid = false;
+    } else {
+        clearError("experienceError");
+    }
+
+    // Time Slot Validation
+    let timeSlot = document.querySelector('input[name="timeSlot"]:checked');
+    if (!timeSlot) {
+        showError("timeSlotError", "Select a time slot.");
+        valid = false;
+    } else {
+        clearError("timeSlotError");
+    }
+
+    // **If validation fails, stop execution**
+    // **If validation fails, stop execution & hide loader**
+    if (!valid) {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("submitBtn").disabled = false;
+        return;
+    }
+
+    // **Prepare Form Data**
+    let formData = {
+        name: name,
+        gender: gender.value,
+        dateOfBirth: dob,
+        mobile: mobileNumber,
+        experience: experience.value,
+        alternateNumber: alternateNumber,
+        email: email,
+        graduationYear: graduationYear,
+        timeSlot: timeSlot.value
+    };
+
+    try {
+        let response = await fetch(`${SUPABASE_URL}/rest/v1/software_registrations`, {  // Replace with actual backend URL
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "apikey": SUPABASE_KEY, 
+                "Authorization": `Bearer ${SUPABASE_KEY}`
+            },
+            body: JSON.stringify(formData)
+        });
+
+        // ✅ Ensure we only parse JSON if the response is not empty
+        let result = await response.text();
+        let jsonResult = result ? JSON.parse(result) : {};  
+
+        if (response.ok) {
+            showPopup("success", "🎉 Registration successful! Our team will contact you soon.");
+            document.getElementById("registrationForm").reset(); // Reset the form after success
+        } else {
+            showPopup("danger", "❌ Registration failed. Please try again after some time.");
+        }
+    } catch (error) {
+        showPopup("danger", "⚠️ Registration failed. Please try again after some time.");
+        console.error("Error:", error);
+    }
+     // Hide loader and enable submit button after response
+     document.getElementById("loader").style.display = "none";
+    document.getElementById("submitBtn").disabled = false;
+});
+
+// Function to validate age range
+function validateAge(dob, minAge, maxAge) {
+    let birthDate = new Date(dob);
+    let today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age >= minAge && age <= maxAge;
+}
+
+// Function to show error messages below the input field
+function showError(id, message) {
+    let errorElement = document.getElementById(id);
+    errorElement.innerText = message;
+    errorElement.style.display = "block"; // Ensure it's visible
+}
+
+// Function to clear error messages
+function clearError(id) {
+    let errorElement = document.getElementById(id);
+    errorElement.innerText = "";
+    errorElement.style.display = "none"; // Hide if no error
+}
+
+function showPopup(type, message) {
+    let alertModal = new bootstrap.Modal(document.getElementById('alertModal'));
+    document.getElementById("alertMessage").innerHTML = message;
+    alertModal.show();
+}
+
+    </script>
+    
+    
+</body>
+</html>

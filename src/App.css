@@ -7,6 +7,21 @@
   font-size: smaller;
   text-align: center;
 }
+.icons-size{
+  font-size: 25px;
+  text-align: center;
+}
+.wp-icons {
+  display: flex;
+align-items: center;
+gap:5px;
+}
+.sm-icons{
+display: flex;
+align-items: center;
+gap: 20%;
+margin-left: 5%;
+}
 @media(max-width:500px) {
   .list_items {
     flex-direction: column;
@@ -24,6 +39,24 @@
   color: #E69D00 !important; /* Active color */
 }
 /********/
+.banner-btn{
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  gap: 5%;
+}
+.donate-btn{
+  background-color:#E69D00 ;
+  padding: 10px 25px;
+  color: #fff;
+  border: none;
+}
+.servicess-btn{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 25px;
+  border: none;
+}
 @media(max-width:500px){
   .slide-txt{
     font-size: 12px;
@@ -59,7 +92,7 @@ position: relative;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 75%;
-  height: 100%; 
+  height:60%; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -370,10 +403,10 @@ position: relative;
 }
 /***donate**/
 .donate-bg {
-  background-image: url("/public/images/donbg.jpg");
+  background-image: url("/public/images/quran.jpg");
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   position: relative;
   padding:50px 50px 0; /* Add padding to ensure content doesn't touch edges */
 }
@@ -461,6 +494,178 @@ footer li {
 
 .logo-section {
   text-align: left;
+}
+/*********************Sewing zform*******************/
+.sewing_bg{
+  background-image: url('/public/images/banner2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90%;
+}
+.sewing-img-content{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12%;
+  
+}
+.sewing-img-content h1{
+   text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+/*********quran***************/
+.course-page {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.course-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.meta-info{
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.meta-info span {
+  display: block;
+  margin-bottom: 10px;
+  
+}
+
+.about-course,
+.learn-section,
+.material-section,
+.curriculum-section {
+  margin-bottom: 40px;
+}
+
+.header-section {
+  background-color: #f0f4ff;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.header-section h1 {
+  margin-bottom: 10px;
+}
+.accordion-button {
+  border: 1px solid #ccc;  /* Add a border around the button */
+  background-color: white;  /* Ensure button has a background */
+  border-radius: 5px;  /* Add rounded corners if needed */
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  border: 1px solid #ccc;  /* Border around the body */
+  border-top: none;  /* Ensure the body does not overlap the button's border */
+  padding: 15px;
+  background-color: #fff;
+}
+
+.accordion-button:focus
+{
+  outline: none !important;  /* Remove the default focus outline */
+  border-color:#ccc !important;  /* Blue border on focus or active state */
+}
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+}
+
+.accordion-header {
+  border-bottom: none;
+}
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;  /* Adjust this value as per your desired spacing */
+}
+/* .course-sidebar { */
+  /* background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* margin-top: -116px;
+    position: sticky;
+    z-index: 9; */
+/* } */
+
+.sidebar-card {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  width: 80%;
+}
+@media(max-width:1000px){
+  .sidebar-card{
+    width: 100%;
+  }
+}
+.video-container {
+  margin-bottom: 20px;
+}
+
+.add-to-cart {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.share-course {
+  width: 100%;
+}
+
+.course-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-includes li {
+  margin-bottom: 10px;
+  border-bottom: inset;
+    display: flex;
+    justify-content: space-between;
+}
+.course-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-to-cart, .buy-course {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.course-divider {
+  margin: 20px 0;
+  border-top: 1px solid #eaeaea;
+}
+.share-course {
+  width: 100%;
+}
+.sticky-sidebar {
+  top: 20px;
+  position: fixed;
+  width: 100%;
+}
+
+.course-sidebar {
+  margin-bottom: 30px;
+}
+.error-text {
+  color: red; /* Set text color to red */
+  font-size: 0.875rem; /* Adjust the font size if needed */
+  
 }
 /*************register form**************************/
 .registerform{
@@ -591,5 +796,276 @@ margin-left: 5px;
 .form-check {
 margin-bottom: 5px; /* Prevent labels from shifting */
 }
+/****tailoring detail***********/
+.section-title {
+  position: relative;
+  margin-left: 5%;
+  
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #e69d00;
+}
+/************aboutus****************/
+.aboutus_bg {
+  background-image: url('/public/images/banner2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.aboutus-img-content{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12%;
+}
+.aboutus-img-content h4 {
 
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+.aboutus-img-content h2 {
 
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+.aboutus-img-content p {
+  
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+.activity-bg{
+  background-color: #f5f5f5 ;
+}
+
+.service-box:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.volunteer-bg{
+  background-image: url('/public/images/volent.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.volunteer-content{
+  background-color: rgba(22, 22, 22, 0.6);
+  /* White background with 80% opacity */
+  padding: 5%;
+  color: #ffffff;
+  margin-bottom: 5%;
+ 
+}
+.volunteer-content h1{
+  text-transform: uppercase;
+  line-height: 1.5;
+  padding-bottom: 3%;
+ text-align: center;
+ text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+/*********service***********/
+.why-choose-us-section {
+  /* background-color: #f5f5f5; */
+  padding-bottom: 5%;
+}
+
+.why-choose-us-section h5 {
+  color: #4CAF50;
+  /* Green color for the subheading */
+  font-weight: bold;
+  padding-top: 5%;
+}
+
+.why-choose-us-section h2 {
+  /* font-weight: bold; */
+  margin-bottom: 40px;
+  font-family: 'Lexend', sans-serif;
+}
+
+.why-choose-card {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  /* Adjust height as needed */
+  perspective: 1000px;
+  /* Adds depth to the 3D effect */
+}
+
+@media (max-width: 768px) {
+  .why-choose-card {
+    margin-bottom: 20px;
+
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.why-choose-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f5f5f5;
+}
+
+.card-back {
+  background-image: url('/public/images/staticbg.png');
+  background-color: rgb(229, 243, 237);
+  background-position: center;
+  transform: rotateY(180deg);
+}
+.icon-containerss {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  /* background-color: #F0F0F0;
+    border-radius: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-containerss img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background-color: #e5f3ec;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+@media (min-width: 768px) and (max-width:1000px) {
+  .whychoosee .col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+/****************************contact****************************/
+.contact-section {
+  background-image: url('/public/images/contact.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10% 0;
+}
+
+.contact-info {
+  position: relative; /* To position the vertical line within this container */
+  padding-left: 10%; /* Adjusted for space for the vertical line */
+}
+
+.contact-info .info-line {
+  position: absolute;
+  top: 0;
+  left: 14px; /* Position it outside the container */
+  height: 100%; /* Full height of the contact-info container */
+  width: 4px; /* Width of the vertical line */
+  background-color:#e69d00; /* Line color */
+}
+
+.contact-info h6 {
+  color: #555;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-info h1 {
+  font-size: 40px;
+  font-weight:600;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact-info .highlight-text {
+  color: #deab36;
+}
+
+.contact-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.contact-details {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 50px;
+  color: #e69d00;
+  margin-bottom: 15px;
+}
+
+.phone-number {
+  font-size: 48px;
+  font-weight: bold;
+  color:#dea216;
+  margin-bottom: 15px;
+}
+
+.contact-button {
+  background-color:#e69d00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 40%;
+  white-space: nowrap;
+}
+
+.contact-button:hover {
+  background-color:#141D38;
+}
+@media(max-width:500px){
+  .contact-info h1{
+    font-size: 30px;
+  }
+  .phone-number{
+    font-size: 30px;
+  }
+  .contact-button{
+    width: 50%;
+  }
+  .logos img{
+    width: 65%;
+  }
+  .feature h4{
+    white-space: nowrap;
+  }
+  .company-description {
+    padding-left: 7%;
+  }
+  .design-text h1{
+    font-size: xx-large;
+  }
+}
+@media(max-width:990.5px){
+  .design-text{
+    padding:5% 0;
+    /* text-align: left; */
+  }
+  
+  
+}

@@ -1,29 +1,56 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function NavbarComponent() {
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  // Function to change language
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <>
       {/* Top Contact Bar */}
       <div
-        style={{ backgroundImage: 'linear-gradient(to right, #e69d00 ,  #f1c152)' }}
-        className="text-white py-2 d-none d-lg-block"
+  style={{ backgroundImage: 'linear-gradient(to right, #e69d00 ,  #f1c152)' }}
+  className="text-black py-2"
+>
+  <div className="container d-flex flex-wrap justify-content-between align-items-center">
+    
+    {/* Left: Social Icons & Language */}
+    <div className="d-flex align-items-center gap-4 flex-wrap">
+      <i className="fa-brands fa-square-facebook icons-size" style={{ fontSize: '25px' }}></i>
+      <i className="fa-brands fa-square-instagram icons-size" style={{ fontSize: '25px' }}></i>
+      <i className="fa-brands fa-square-twitter icons-size" style={{ fontSize: '25px' }}></i>
+      <select
+        onChange={(e) => changeLanguage(e.target.value)}
+        className="form-select form-select-sm"
+        style={{ width: '100px' }}
       >
-        <div className="container d-flex justify-content-between">
-          <div>
-            <i className="fa-solid fa-location-dot ms-3"></i> 4A, South Mohideen Pallivasal Street, Mpm, Tvl
-          </div>
-          <div>
-            <h5>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h5>
-          </div>
-          <div>
-            <i className="fa-brands fa-whatsapp"></i> +91-9585434368 / +91-8220347600
-          </div>
-        </div>
-      </div>
+        <option value="ta">தமிழ்</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    {/* Center: Arabic Text */}
+    <div className="text-center flex-grow-1 d-none d-lg-block">
+      <h6 className="m-0" style={{ fontSize: '16px' }}>
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </h6>
+    </div>
+
+    {/* Right: WhatsApp */}
+    <div className="d-flex align-items-center gap-2">
+      <i className="fa-brands fa-whatsapp" style={{ fontSize: '20px' }}></i>
+      <span className="fw-semibold" style={{ fontSize: '15px' }}>+91-8220347600</span>
+    </div>
+
+  </div>
+</div>
 
       {/* Navbar */}
       <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" className="shadow">
@@ -31,8 +58,8 @@ export default function NavbarComponent() {
           <div className="d-flex justify-content-between align-items-center w-100">
             {/* Logo */}
             <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
-              <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '100px', height: 'auto', marginRight: '10px' }} />
-              <h5 className="mb-0 d-none d-sm-block" style={{ color: '#ffce05' }}>Al-Infaaq Welfare Association</h5>
+              <img src="images/AIWA_YELLOW_LOGO.png" alt="logo" style={{ width: '18vh', marginRight: '10px' }} />
+
             </Navbar.Brand>
 
             {/* Toggler Button */}
@@ -47,7 +74,7 @@ export default function NavbarComponent() {
                 className={location.pathname === '/' ? 'fw-bold' : ''}
                 style={{ color: location.pathname === '/' ? '#E69D00' : 'inherit' }}
               >
-                Home
+             Home
               </Nav.Link>
 
               <Nav.Link
@@ -61,9 +88,9 @@ export default function NavbarComponent() {
 
               <Nav.Link
                 as={Link}
-                to="/whyreadnlearn"
-                className={location.pathname === '/whyreadnlearn' ? 'fw-bold' : ''}
-                style={{ color: location.pathname === '/whyreadnlearn' ? '#E69D00' : 'inherit' }}
+                to="/services"
+                className={location.pathname === '/services' ? 'fw-bold' : ''}
+                style={{ color: location.pathname === '/services' ? '#E69D00' : 'inherit' }}
               >
                 Services
               </Nav.Link>
@@ -72,15 +99,15 @@ export default function NavbarComponent() {
               <NavDropdown title="Our Courses" id="courses-dropdown">
                 <NavDropdown.Item
                   as={Link}
-                  to="/quran"
-                  style={{ color: location.pathname === '/quran' ? '#E69D00' : 'inherit' }}
+                  to="/tailoringDetail"
+                  style={{ color: location.pathname === '/tailoringDetail' ? '#E69D00' : 'inherit' }}
                 >
                   Sewing Training
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   as={Link}
-                  to="/arabic"
-                  style={{ color: location.pathname === '/arabic' ? '#E69D00' : 'inherit' }}
+                  to="/softwareDetail"
+                  style={{ color: location.pathname === '/softwareDetail' ? '#E69D00' : 'inherit' }}
                 >
                   Software Course
                 </NavDropdown.Item>
