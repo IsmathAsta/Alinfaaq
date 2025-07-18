@@ -85,14 +85,14 @@ const handleSubmit = async(e) =>{
         const docRef = await addDoc(collection(db, "tailoringForm"), {
             name: formData.name,
             gender: formData.gender,
-            age: formData.age, // Ensure the field for date of birth is captured
+            age: formData.age, 
             mobile: formData.mobile,
             timeSlot: formData.timeSlot,
             parentSpouseName: formData.parentSpouseName,
-            hasStartBusiness: formData.hasStartBusiness, // Business status (Yes/No)
-            hasExperience: formData.hasExperience, // Experience status (Yes/No)
-            education: formData.education, // Education field
-            occupation: formData.occupation, // Occupation field
+            hasStartBusiness: formData.hasStartBusiness, 
+            hasExperience: formData.hasExperience, 
+            education: formData.education, 
+            occupation: formData.occupation, 
             address: formData.address 
         });
 

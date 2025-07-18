@@ -24,7 +24,7 @@ export default function SoftwareForm() {
     const [graduationYears, setGraduationYears] = useState([]);
 
     useEffect(() => {
-        // Generate graduation years dynamically (from current year to 2003)
+        
         const currentYear = new Date().getFullYear();
         let years = [];
         for (let year = currentYear; year >= 2003; year--) {

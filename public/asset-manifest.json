@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ec31ad65.css",
+    "main.js": "/static/js/main.3a6250f1.js",
+    "static/js/488.5d204a2c.chunk.js": "/static/js/488.5d204a2c.chunk.js",
+    "static/media/banner2.jpg": "/static/media/banner2.9ad58e646533f93f7ef4.jpg",
+    "static/media/volent.jpg": "/static/media/volent.de511ad289c52925beed.jpg",
+    "static/media/footerbg.jpg": "/static/media/footerbg.f47c7feefca040ae778e.jpg",
+    "static/media/service-bg.png": "/static/media/service-bg.df6fd177463a7ce45769.png",
+    "static/media/popbg.png": "/static/media/popbg.56025bd5b46ce66076b7.png",
+    "static/media/servicebg.png": "/static/media/servicebg.0a483ed11105ce45f18e.png",
+    "static/media/quran.jpg": "/static/media/quran.9f652d7e2144b03fbffe.jpg",
+    "static/media/aboutbg.jpg": "/static/media/aboutbg.b6de40bbc1df3a635214.jpg",
+    "static/media/staticbg.png": "/static/media/staticbg.26b386c23076f2f289dd.png",
+    "static/media/contact.webp": "/static/media/contact.0fd08ba11ec2dc1d3f0a.webp",
+    "index.html": "/index.html",
+    "main.ec31ad65.css.map": "/static/css/main.ec31ad65.css.map",
+    "main.3a6250f1.js.map": "/static/js/main.3a6250f1.js.map",
+    "488.5d204a2c.chunk.js.map": "/static/js/488.5d204a2c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec31ad65.css",
+    "static/js/main.3a6250f1.js"
+  ]
+}
